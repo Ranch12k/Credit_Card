@@ -1,0 +1,217 @@
+
+*{ 
+    margin: 0 ;
+    padding: 0;
+    box-sizing: border-box;
+} 
+.Dashboard{ 
+    width: 100%;
+    height: 100vh;
+    display: flex;
+} 
+/* User Side Bar  start*/
+
+.UserSideBar{ 
+    
+    position: absolute;
+    width: 230px;
+    height: 100vh;
+    /* background-color: azure; */
+    display: flex;
+    display: none;
+    z-index: 10;
+    backdrop-filter: blur(14px);
+
+
+} 
+.slidebutton{ 
+    width: 20px;
+    height: 100vh;
+    background-color: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 20px;
+    /* line-height: 10px; */
+} 
+#SideBar { 
+    padding-top: 21px;
+    width: 230px;
+    height: 100vh;
+    /* background: #ffffff; */
+    /* border-top-right-radius: 8px; */
+    box-shadow: 2px -2px 19px 3px #80808069;
+} 
+#Slogo{ 
+    /* display: flex; */
+    height: 100px;
+    margin-top: 10px;
+    font-size: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+} 
+#Slogo img{ 
+    height: 100px;
+    border-radius: 20px;
+    margin: 0 10px;
+   
+} 
+#SideOl {
+    margin-top: 20px;
+    width: 100%;
+    height: 89vh;
+    /* background-color: #7ffbff; */
+    padding: 10px 0px;
+
+
+}
+#SideOl ol{
+    height: 40px;
+    margin-top: 10px;
+}
+#SideOl a{
+   
+    display: flex;
+    text-decoration: none;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    width: 100%;
+    padding: 0px 0px 0px 40px;
+    color: #ffffff;
+    font-weight: bolder;
+    box-shadow: 1px;
+
+}
+.SideBarSideHead{
+    color: #5d5454;
+    padding: 4px;
+    font-size: 10px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin-top: 10px;
+}
+#SidebarIn{
+    width: 100%;
+    display: flex;
+    /* justify-content: end; */
+    padding-right: 10px;
+    padding-left: 255px;
+}
+#SidebarOut{
+    width: 100%;
+    display: flex;
+    justify-content: end;
+    padding-right: 10px;
+}
+/* User Side Bar  End*/
+
+/* Top Nav Bar Start */
+.TopNavBar{
+    background-color: #ffffff;
+    width: 100%;
+    height: 45px;
+    margin-left: 3px;
+    /* box-shadow: 10px 0px 14px 4px #80808069; */
+    box-shadow: 12px -4px 18px 0px white;
+
+}
+#UserTopNav{
+    width: 100%;
+    height: 100%;
+    /* background-color: blue; */
+    background-color: #0a242b;
+    color: white;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+
+}
+#UserTopNav .UserLogo{
+    width: 150px;
+ 
+    float: right;
+    text-decoration: none;
+    color: white;
+
+    padding: 5px 10px;
+}
+.ProfileAttributes{
+    background-color: #ffffff;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    margin-top: 115px;
+    margin-right: 3px;
+    padding: 5px 33px;
+    border-radius: 4px;
+    box-shadow: 0px 0px 7px 4px #8080806e;
+    display: none;
+    z-index: 10;
+
+}
+.ProfileAttributes a{
+    text-decoration: none;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    width: 100%;
+    height: 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: black;
+}
+
+/* Top Nav Bar  End*/
+/* Content Section Start*/
+.ContentSection{
+    background-image: url('https://t4.ftcdn.net/jpg/03/88/65/45/360_F_388654597_RJ46YzwmSQ8Jabg3ARtCJ4rkAKBzmvo3.jpg');
+    background-position: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-color: #ffffff;
+    z-index: 6;
+   
+}
+.MiddleSection{
+    position: absolute;
+    width: 500px;
+    height: 254px;
+    padding: 35px 5px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    border-radius: 18px;
+    margin-top: 200px;
+    margin-left: 680px;
+    box-shadow: 0px 0px 13px 8px #ffffff;
+    backdrop-filter: blur(14px);
+    color: #021d35;
+
+}
+.Wmsg{
+    line-height: 40px;
+    margin: auto;
+}
+.Wbuttons{
+    height: 50px;
+}
+.MiddleSection a{
+    text-decoration: none;
+    font-size: 20px;
+    padding: 10px 20px;
+    margin: 0 6px;
+    /* background-color: #838383ed; */
+    border-radius: 5px;
+    color: #a9ffe4;
+    box-shadow: -1px 1px 9px 0px gray;
+    backdrop-filter: blur(39px);
+    border: 1px solid #000000;
+}
+.MiddleSection .Wbuttons a:hover {
+    background-color: #313239e3;
+}

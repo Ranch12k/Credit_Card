@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload and Display Multiple Images</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 20px;
+        }
+        input[type="file"] {
+            margin-bottom: 20px;
+        }
+        .image-gallery {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        .image-container {
+            border: 1px solid #ccc;
+            padding: 10px;
+            max-width: 200px;
+            text-align: center;
+        }
+        .image-container img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Upload and Display Multiple Images</h1>
+
+    <input type="file" id="fileInput" multiple accept="image/*">
+    <div class="image-gallery" id="imageGallery"></div>
+
+    <script>
+        // Get references to the file input and image gallery
+        const fileInput = document.getElementById('fileInput');
+        const imageGallery = document.getElementById('imageGallery');
+
+        // Function to handle the file input change event
+        fileInput.addEventListener('add', function(event) {
+            const files = event.target.files;
+
+            // Clear the gallery to avoid duplicates
+            imageGallery.innerHTML = '';
+
+            // Loop through the files and display each image
+            for (let i = 0; i < files.length; i++) {
+                const file = files[i];
+
+                // Create a file reader
+                const reader = new FileReader();
+
+                // Define what to do when the file is loaded
+                reader.onload = function(e) {
+                    // Create an image element
+                    const img = document.createElement('img');
+                    img.src = e.target.result;
+
+                    // Create a container for the image
+                    const imageContainer = document.createElement('div');
+                    imageContainer.classList.add('image-container');
+                    imageContainer.appendChild(img);
+
+                    // Append the image container to the gallery
+                    imageGallery.appendChild(imageContainer);
+                };
+
+                // Read the file as a data URL (this is needed to display the image)
+                reader.readAsDataURL(file);
+            }
+        });
+    </script>
+
+</body>
+</html>
